@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birim Dönüştürücü ve Hesap Makinesi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <input type="text" id="display" disabled>
+            <button onclick="press('AC')">AC</button>
+            <button onclick="press('(')">(</button>
+            <button onclick="press(')')">)</button>
+            <button onclick="press('%')">%</button>
+            <button onclick="press('7')">7</button>
+            <button onclick="press('8')">8</button>
+            <button onclick="press('9')">9</button>
+            <button onclick="press('*')">×</button>
+            <button onclick="press('4')">4</button>
+            <button onclick="press('5')">5</button>
+            <button onclick="press('6')">6</button>
+            <button onclick="press('-')">−</button>
+            <button onclick="press('1')">1</button>
+            <button onclick="press('2')">2</button>
+            <button onclick="press('3')">3</button>
+            <button onclick="press('+')">+</button>
+            <button onclick="press('0')">0</button>
+            <button onclick="press('.')">.</button>
+            <button onclick="press('/')">÷</button>
+            <button onclick="calculate()">=</button>
+        </div>
+
+        <div class="unit-converter">
+            <!-- Length Conversion -->
+            <div class="conversion-section">
+                <label>Uzunluk</label>
+                <input type="number" id="length-input" placeholder="Değer girin">
+                <select id="length-from">
+                    <option value="cm">Santimetre (cm)</option>
+                    <option value="m">Metre (m)</option>
+                    <option value="km">Kilometre (km)</option>
+                    <option value="in">İnç (in)</option>
+                    <option value="ft">Ayak (ft)</option>
+                    <option value="yd">Yarda (yd)</option>
+                    <option value="mi">Mil (mi)</option>
+                </select>
+                <select id="length-to">
+                    <option value="cm">Santimetre (cm)</option>
+                    <option value="m">Metre (m)</option>
+                    <option value="km">Kilometre (km)</option>
+                    <option value="in">İnç (in)</option>
+                    <option value="ft">Ayak (ft)</option>
+                    <option value="yd">Yarda (yd)</option>
+                    <option value="mi">Mil (mi)</option>
+                </select>
+                <button onclick="convertLength()">Dönüştür</button>
+                <div id="length-result"></div>
+            </div>
+
+            <!-- Weight Conversion -->
+            <div class="conversion-section">
+                <label>Ağırlık</label>
+                <input type="number" id="weight-input" placeholder="Değer girin">
+                <select id="weight-from">
+                    <option value="g">Gram (g)</option>
+                    <option value="kg">Kilogram (kg)</option>
+                    <option value="lb">Pound (lb)</option>
+                    <option value="oz">Ons (oz)</option>
+                </select>
+                <select id="weight-to">
+                    <option value="g">Gram (g)</option>
+                    <option value="kg">Kilogram (kg)</option>
+                    <option value="lb">Pound (lb)</option>
+                    <option value="oz">Ons (oz)</option>
+                </select>
+                <button onclick="convertWeight()">Dönüştür</button>
+                <div id="weight-result"></div>
+            </div>
+
+            <!-- Volume Conversion -->
+            <div class="conversion-section">
+                <label>Hacim</label>
+                <input type="number" id="volume-input" placeholder="Değer girin">
+                <select id="volume-from">
+                    <option value="ml">Mililitre (ml)</option>
+                    <option value="l">Litre (l)</option>
+                    <option value="cl">Santilitre (cl)</option>
+                </select>
+                <select id="volume-to">
+                    <option value="ml">Mililitre (ml)</option>
+                    <option value="l">Litre (l)</option>
+                    <option value="cl">Santilitre (cl)</option>
+                </select>
+                <button onclick="convertVolume()">Dönüştür</button>
+                <div id="volume-result"></div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Created by Hibe</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
